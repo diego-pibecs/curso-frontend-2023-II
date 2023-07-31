@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables de paleta de colores y de fuentes para los textos */
+:root {
+    --light-gray: #a4a4a4;
+    --gray: #333333;
+    --light-black: #282828;
+    --dark-gray: #2e2e2e;
+    --palid-blue: #EBF5FF;
+    --oceanic-blue: #2B4860;
+    --h1-font-family: 'DM Serif Text', sans-serif;
+    --sans-serif-font-family: 'Rubik', sans-serif;
+    --serif-font-family: 'Cormorant', serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0 270px 0;
+}
+
+h1 {
+    font-family: var(--h1-font-family);
+    font-size: 62px;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+h2,
+h3 {
+    font-family: var(--sans-serif-font-family);
+    font-size: 24px;
+    color: var(--palid-blue);
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* Barra de navegación */
+#navbar {
+    height: 80px;
+    border-bottom: 2px var(--light-gray) solid;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    transition: background-color 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+#navbar.turn-darkmode {
+    background-color: var(--gray) !important;
+}
+
+.turn-darkmode {
+    color: white !important;
+}
+
+#navbar img {
+    width: 200px;
+}
+
+#navbar > i { /* Selector del primer hijo "i" inmediato de #navabar. Consultar tipos de selectores en https://www.w3schools.com/cssref/css_selectors.php */
+    position: absolute;
+    left: 60px;
+    /* pt es otra unidad en CSS. A mí me gusta utilizarla solamente para texto. */
+    font-size: 26pt;
+    color: var(--dark-gray);
+}
+
+/* Menú desplegable */
+#collapsable-navbar {
+    color: white;
+    background-image: url(/images/side-nav-gallery.svg);
+    background-size: cover;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    /* Transformación y transición que actuarán cuando se active o desactive la barra de navegación lateral por medio de JavaScript */
+    transform: translateX(-250px); 
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 250px;
+    /* vh (viewport height) es una unidad que está directamente relacionada con el viewport.
+    Se comporta como un porcentaje. La barra de navegación será del 100% de la altura del viewport */
+    height: 100vh;
+    border-right: 2px var(--light-gray) solid;
+}
+
+.show-navbar {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(0) !important;
+}
+
+#close-menu-icon {
+    position: relative;
+    z-index: 10;
+}
+
+.modify-navbar-text {
+    font-family: var(--sans-serif-font-family);
+    font-size: 32px;
+}
+
+/* Elementos del menú desplegable */
+#collapsable-navbar div:not(.upper-collapsable-navbar) { 
+    /* :not() es un selector. Esta reglas se puede leer como 
+    "todos los divs que no tienen la clase 'upper-collapsable-navbar' y que son hijos del elemento con id 'collapsable-navbar'" */
+    font-family: var(--serif-font-family);
+    font-size: 18pt;
+    font-weight: 700;
+}
+
+.inner-collapsable-navbar menu {
+    list-style-type: none;
+}
+
+.inner-collapsable-navbar menu:nth-child(2) {
+    /* :nth-child() es otro selector. Esta regla se puede leer como 
+    "el segundo elemento 'menu' hijo de los elementos con clase 'inner-collapsable-navbar'" */
+    font-size: 12pt;
+}
+
+.inner-collapsable-navbar,
+.lower-collapsable-bar {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lower-collapsable-bar {
+    padding: 60px 40px;
+}
+
+.lower-collapsable-bar p {
+    font-style: italic;
+}
+
+#close-menu-icon {
+    font-size: 26pt;
+    cursor: pointer;
+}
+
+#menu-icon:hover {
+    cursor: pointer;
+}
+
+.upper-collapsable-navbar {
+    height: 80px;
+    border-bottom: 2px var(--light-gray) solid;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+/* Enlaces de navegación del centro de la página */
+.main-navigation-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 2px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
+.main-navigation-links div {
+    background-image: url(/images/nav-grainy.svg);
+    background-color: #2B2B2B;
+    padding: 45px 80px;
+    display: flex;
+}
+
+.main-navigation-links div:nth-child(1) {
+    padding-left: 90px;
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+}
+
+.main-navigation-links div:nth-child(2) img {
+    width: 200px;
+}
+
+.main-navigation-links div:nth-child(3) {
+    padding-right: 90px;
+    border-top-right-radius: 90px;
+    border-bottom-right-radius: 90px;
+}
+
+/* Contenido del CV */
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 180px 140px;
+    border-radius: 100px 100px 0 0;
+    background-image: url(/images/main-grainy.png);
+    background-size: cover;
+}
+
+.main-navigation-links div img {
+    width: 257px;
+}
+
+#about-me h1 {
+    text-align: center;
+    color: white;
+}
+
+#about-me > section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 85px;
+    width: 850px;
+}
+
+/* Contacto en CV (enlaces a GitHub y correo) */
+.about-me-contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+}
+
+.about-me-contact-container a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--palid-blue);
+    font-family: var(--sans-serif-font-family);
+    font-style: italic;
+}
+
+/* El efecto de animación del hover en el texto de los enlaces de contacto está explicado en este video: https://youtu.be/yu0Cm4BqQv0 */
+
+/* La siguiente regla es una animación. Consultar animaciones en
+https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php
+https://www.w3schools.com/cssref/css3_pr_animation.php
+https://www.w3schools.com/cssref/css_animatable.php */
+
+@keyframes text-hover {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+.about-me-contact-container a:hover * {
+    color: #7777774d;
+    fill: #77777781;
+    animation: text-hover 1s ease infinite forwards;
+    background: linear-gradient(to left,
+            black,
+            rgba(43, 43, 43, 0.37),
+            rgba(100, 100, 100, 0.226),
+            rgba(82, 82, 82, 0.445),
+            rgba(65, 65, 65, 0.384),
+            rgb(37, 37, 37),
+            black);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    background-size: 170%;
+}
+
+.about-me-contact-container svg {
+    width: 40px;
+}
+
+/* Barra horizontal (horizontal rule) */
+hr {
+    border: 1px var(--palid-blue) solid;
+    opacity: 0.25;
+}
+
+/* CV */
+.about-me-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-me-info-container>div {
+    gap: 20px
+}
+
+.about-me-info-container div {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans-serif-font-family);
+    color: var(--palid-blue);
+    text-align: end;
+    font-weight: 300;
+}
+
+.about-me-info-span {
+    font-style: italic;
+}
+
+div.technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.technologies .technologies-row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+div.technologies span {
+    padding: 5px 10px;
+    background-color: var(--oceanic-blue);
+    border-radius: 10px;
+}
+
+div.languages-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 16pt;
+}
+
+div.languages-flex span:nth-child(2),
+#oxford-test {
+    color: var(--light-gray);
+}
+
+#oxford-test {
+    position: absolute;
+    transform: translate(-170px, 52px);
+    font-size: 10pt;
+    font-style: italic;
+}
