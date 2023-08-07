@@ -6,15 +6,17 @@
 
 /* Variables de paleta de colores y de fuentes para los textos */
 :root {
+    --palid-blue: #EBF5FF;
+    --lighter-gray: #f0f0f0;
     --light-gray: #a4a4a4;
     --gray: #333333;
     --light-black: #282828;
     --dark-gray: #2e2e2e;
-    --palid-blue: #EBF5FF;
     --oceanic-blue: #2B4860;
     --h1-font-family: 'DM Serif Text', sans-serif;
     --sans-serif-font-family: 'Rubik', sans-serif;
-    --serif-font-family: 'Cormorant', serif;
+    --serif-titles-font-family: 'Cormorant', serif;
+    --serif-texts-font-family: 'Crimson Text', serif;
 }
 
 main {
@@ -62,7 +64,7 @@ h3 {
 }
 
 #navbar.turn-darkmode {
-    background-color: var(--gray) !important;
+    background-color: var(--light-black) !important;
 }
 
 .turn-darkmode {
@@ -122,7 +124,7 @@ h3 {
 #collapsable-navbar div:not(.upper-collapsable-navbar) { 
     /* :not() es un selector. Esta reglas se puede leer como 
     "todos los divs que no tienen la clase 'upper-collapsable-navbar' y que son hijos del elemento con id 'collapsable-navbar'" */
-    font-family: var(--serif-font-family);
+    font-family: var(--serif-titles-font-family);
     font-size: 18pt;
     font-weight: 700;
 }
@@ -131,10 +133,19 @@ h3 {
     list-style-type: none;
 }
 
+.inner-collapsable-navbar menu li {
+    margin-bottom: 5px;
+}
+
+.inner-collapsable-navbar menu li a {
+    color: white;
+    text-decoration: none;
+}
+
 .inner-collapsable-navbar menu:nth-child(2) {
     /* :nth-child() es otro selector. Esta regla se puede leer como 
     "el segundo elemento 'menu' hijo de los elementos con clase 'inner-collapsable-navbar'" */
-    font-size: 12pt;
+    font-size: 13.5pt;
 }
 
 .inner-collapsable-navbar,
@@ -150,6 +161,7 @@ h3 {
 }
 
 .lower-collapsable-bar p {
+    font-size: 14pt;
     font-style: italic;
 }
 
@@ -356,4 +368,120 @@ div.languages-flex span:nth-child(2),
     transform: translate(-170px, 52px);
     font-size: 10pt;
     font-style: italic;
+}
+
+
+/* ################ NOTAS ################ */
+
+#notes-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.4rem;
+    padding: 6rem;
+    width: 80rem;
+    margin: 0 auto;
+    color: var(--gray);
+}
+
+#notes-menu {
+    width: calc(100% + 10rem); /* Cálculo del ancho de un elemento haciendo la suma del 100% de su espacio más 10rem */
+    height: 40rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--light-gray) solid;
+    border-radius: 20px 0 0 20px;
+    list-style-type: none;
+    align-self: flex-start;
+}
+
+#notes-menu li {
+    border-bottom: 1px var(--light-gray) solid;
+    padding: 1.4rem 2rem;
+    font-family: var(--sans-serif-font-family);
+}
+
+/* Cada <li> tiene un borde inferior que simula la separación de cada elemento. Quitamos esta propiedad al último <li> */
+#notes-menu li:last-child {
+    border: none;
+}
+
+#notes-menu li:focus {
+    outline: none;
+    background-color: var(--lighter-gray);
+}
+
+#notes-menu li:hover {
+    background-color: var(--lighter-gray);
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+#notes-menu .active-li {
+    background-color: var(--lighter-gray);
+}
+
+#notes-menu h5 {
+    font-weight: 500;
+    font-size: 14pt;
+}
+
+#notes-menu p {
+    font-weight: 500;
+    font-size: 11pt;
+    color: var(--light-gray);
+}
+
+#notes-container {
+    max-width: 700px;
+    padding-right: 3rem;
+    height: 40rem;
+    overflow-y: auto;
+    align-self: flex-start;
+}
+
+#notes-container::-webkit-scrollbar, #notes-menu::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--lighter-gray);
+}
+
+#notes-container::-webkit-scrollbar-thumb, #notes-menu::-webkit-scrollbar-thumb {
+    background: var(--light-gray);
+    border-radius: 25px;
+}
+
+#notes-menu::-webkit-scrollbar-thumb {
+    border-radius: 0;
+}
+
+.note-info {
+    display: none;
+}
+
+.note-info.active-note {
+    display: block;
+}
+
+.note-info h4 {
+    font-family: var(--serif-texts-font-family);
+    font-weight: 800;
+    font-size: 24pt;
+}
+
+.note-info .note-date {
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--light-gray);
+}
+
+.note-info hr {
+    margin: 2rem 0;
+    border-color: var(--dark-gray);
+}
+
+.note-info p {
+    font-family: var(--serif-texts-font-family);
+    font-size: 16pt;
+    color: var(--dark-gray);
 }

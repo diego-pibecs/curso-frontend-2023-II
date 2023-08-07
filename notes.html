@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Arroyo</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script defer src="js/scripts.js"></script>
+    <script defer src="js/notes.js"></script>
+</head>
+<body>
+    <nav id="navbar">
+        <i id="menu-icon" class="fa fa-bars" aria-hidden="true"></i>
+        <div id="collapsable-navbar">
+            <div class="upper-collapsable-navbar">
+                <i id="close-menu-icon" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="lower-collapsable-bar">
+                <div class="inner-collapsable-navbar">
+                    <menu>
+                        <li><a href="index.html">inicio</a></li>
+                        <li><a href="#">galería</a></li>
+                        <li><a href="notes.html">notas</a></li>
+                        <li><a href="#">música</a></li>
+                    </menu>
+                    <menu>
+                        <li><a href="#">lo mejor de 2023</a></li>
+                        <li><a href="#">lo mejor de 2022</a></li>
+                    </menu>
+                </div>
+                <p>@diego.pibecs</p>
+            </div>
+        </div>
+        <a href="index.html">
+            <img id="navbar-logo" src="images/logo-black.svg" alt="logo">
+        </a>
+    </nav>
+    <main id="notes-wrapper">
+        <menu id="notes-menu">
+            <li class="active-li">
+                <h5>Título de notas uno</h5>
+                <p>28 mar 2023</p>
+            </li>
+            <li>    
+                <h5>Este es el segundo</h5>
+                <p>29 mar 2023</p>
+            </li>
+            <li>
+                <h5>Nota</h5>
+                <p>20 jun 2023</p>
+            </li>
+            <li>
+                <h5>Nota</h5>
+                <p>20 jun 2023</p>
+            </li>
+            <li>
+                <h5>Error a partir de aquí</h5>
+                <p>20 jun 2023</p>
+            </li>
+            <li>
+                <h5>¿Por qué?</h5>
+                <p>20 jun 2023</p>
+            </li>
+            <li>
+                <h5>Nota</h5>
+                <p>20 jun 2023</p>
+            </li>
+            <li>
+                <h5>Nota</h5>
+                <p>20 jun 2023</p>
+            </li>
+            <li>
+                <h5>Nota</h5>
+                <p>12 ene 2023</p>
+            </li>
+        </menu>
+        <section id="notes-container">
+            <div class="note-info active-note"> <!-- La primera nota siempre estará activa. "active-note" pasará a otros contenedores con JavaScript -->
+                <h4>Título de notas uno</h4>
+                <p class="note-date">28 mar 2023</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ex, iste minima architecto, sit eveniet qui rem cupiditate accusamus sequi quas? Ipsam repellat laboriosam temporibus provident fugiat fugit excepturi blanditiis est ab neque? Odio ut quidem nobis natus nulla non.</p>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, debitis. Asperiores repellat pariatur possimus. Amet laborum aliquam asperiores, placeat blanditiis eius maxime sequi officia commodi rem error exercitationem necessitatibus quidem a. Placeat mollitia ex debitis vel architecto, error illum tempora laborum tempore iusto.</p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla libero reiciendis tempora voluptatum ipsam excepturi impedit mollitia distinctio sed fugiat, voluptatibus dolores eos quia vel eaque incidunt autem. Ipsam, quas cum ducimus doloremque similique sed illum rerum. Obcaecati, cumque. Ut dolorum eaque ad voluptas quod necessitatibus magnam eos commodi labore?</p>
+            </div>
+            <div class="note-info">
+                <h4>Este es el segundo</h4>
+                <p class="note-date">20 jun 2023</p>
+                <hr>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, debitis. Asperiores repellat pariatur possimus. Amet laborum aliquam asperiores, placeat blanditiis eius maxime sequi officia commodi rem error exercitationem necessitatibus quidem a. Placeat mollitia ex debitis vel architecto, error illum tempora laborum tempore iusto.</p>                
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla libero reiciendis tempora voluptatum ipsam excepturi impedit mollitia distinctio sed fugiat, voluptatibus dolores eos quia vel eaque incidunt autem. Ipsam, quas cum ducimus doloremque similique sed illum rerum. Obcaecati, cumque. Ut dolorum eaque ad voluptas quod necessitatibus magnam eos commodi labore?</p>
+            </div>
+            <div class="note-info">
+                <h4>Normal</h4>
+                <p class="note-date">20 jun 2023</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ex, iste minima architecto, sit eveniet qui rem cupiditate accusamus sequi quas? Ipsam repellat laboriosam temporibus provident fugiat fugit excepturi blanditiis est ab neque? Odio ut quidem nobis natus nulla non.</p>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, debitis. Asperiores repellat pariatur possimus. Amet laborum aliquam asperiores, placeat blanditiis eius maxime sequi officia commodi rem error exercitationem necessitatibus quidem a. Placeat mollitia ex debitis vel architecto, error illum tempora laborum tempore iusto.</p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla libero reiciendis tempora voluptatum ipsam excepturi impedit mollitia distinctio sed fugiat, voluptatibus dolores eos quia vel eaque incidunt autem. Ipsam, quas cum ducimus doloremque similique sed illum rerum. Obcaecati, cumque. Ut dolorum eaque ad voluptas quod necessitatibus magnam eos commodi labore?</p>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, debitis. Asperiores repellat pariatur possimus. Amet laborum aliquam asperiores, placeat blanditiis eius maxime sequi officia commodi rem error exercitationem necessitatibus quidem a. Placeat mollitia ex debitis vel architecto, error illum tempora laborum tempore iusto.</p>
+            </div>
+            <div class="note-info">
+                <h4>Nota</h4>
+                <p class="note-date">20 jun 2023</p>
+                <hr>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ex, iste minima architecto, sit eveniet qui rem cupiditate accusamus sequi quas? Ipsam repellat laboriosam temporibus provident fugiat fugit excepturi blanditiis est ab neque? Odio ut quidem nobis natus nulla non.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio recusandae eligendi debitis quod fuga quasi hic unde, ipsum perspiciatis assumenda ipsam velit, quidem molestias officiis? Natus doloribus omnis veritatis impedit, corrupti rem, consequuntur repudiandae voluptas ducimus odit aut iste quaerat harum ipsum quia quibusdam illum excepturi perspiciatis error sed dolore tenetur! Blanditiis laboriosam voluptatem explicabo iure animi vero, odio, quod impedit incidunt illum porro perspiciatis unde dolorum pariatur, ipsam sapiente? Repellendus nesciunt eligendi, ullam molestiae accusantium possimus nulla qui distinctio sit asperiores voluptatibus tempora cum doloremque molestias sint magni dolorem fuga suscipit velit, blanditiis unde praesentium eius? Laboriosam, porro?</p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla libero reiciendis tempora voluptatum ipsam excepturi impedit mollitia distinctio sed fugiat, voluptatibus dolores eos quia vel eaque incidunt autem. Ipsam, quas cum ducimus doloremque similique sed illum rerum. Obcaecati, cumque. Ut dolorum eaque ad voluptas quod necessitatibus magnam eos commodi labore?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum ex, iste minima architecto, sit eveniet qui rem cupiditate accusamus sequi quas? Ipsam repellat laboriosam temporibus provident fugiat fugit excepturi blanditiis est ab neque? Odio ut quidem nobis natus nulla non.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio recusandae eligendi debitis quod fuga quasi hic unde, ipsum perspiciatis assumenda ipsam velit, quidem molestias officiis? Natus doloribus omnis veritatis impedit, corrupti rem, consequuntur repudiandae voluptas ducimus odit aut iste quaerat harum ipsum quia quibusdam illum excepturi perspiciatis error sed dolore tenetur! Blanditiis laboriosam voluptatem explicabo iure animi vero, odio, quod impedit incidunt illum porro perspiciatis unde dolorum pariatur, ipsam sapiente? Repellendus nesciunt eligendi, ullam molestiae accusantium possimus nulla qui distinctio sit asperiores voluptatibus tempora cum doloremque molestias sint magni dolorem fuga suscipit velit, blanditiis unde praesentium eius? Laboriosam, porro?</p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla libero reiciendis tempora voluptatum ipsam excepturi impedit mollitia distinctio sed fugiat, voluptatibus dolores eos quia vel eaque incidunt autem. Ipsam, quas cum ducimus doloremque similique sed illum rerum. Obcaecati, cumque. Ut dolorum eaque ad voluptas quod necessitatibus magnam eos commodi labore?</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
