@@ -485,3 +485,31 @@ div.languages-flex span:nth-child(2),
     font-size: 16pt;
     color: var(--dark-gray);
 }
+
+@media screen and (max-width: 1600px) {
+    main {
+        padding: 100px 0 170px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 100px 0 170px 0;
+    }
+
+    #notes-wrapper {
+        width: auto;
+    }
+
+    .main-navigation-links div img {
+        width: 175px;
+    }
+
+    .main-navigation-links div:nth-child(2) img {
+        width: 175px;
+    }
+
+    .main-navigation-links div {
+        padding: 45px 60px;
+    }
+}
