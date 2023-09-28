@@ -64,7 +64,7 @@ h3 {
 }
 
 #navbar.turn-darkmode {
-    background-color: var(--light-black) !important;
+    background-color: var(--gray) !important;
 }
 
 .turn-darkmode {
@@ -140,6 +140,10 @@ h3 {
 .inner-collapsable-navbar menu li a {
     color: white;
     text-decoration: none;
+}
+
+.inner-collapsable-navbar menu li a:hover {
+    color: var(--light-gray);
 }
 
 .inner-collapsable-navbar menu:nth-child(2) {
